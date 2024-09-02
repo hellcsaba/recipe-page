@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--stone-100);
+    font-family: "Outfit", san-serif;
+    line-height: 1.4rem;
+    color: var(--stone-600);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem 0;
+    padding: 0;
+}
+
+.recipe-article {
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 20px;
+    max-width: 45rem;
+}
+
+.recipe-image {
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.recipe-title {
+    font-family: 'Young serif', sans-serif;
+    font-size: 2rem;
+    color: var(--stone-900);
+}
+
+.prep-time-section {
+    background-color: var(--rose-50);
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border-radius: 10px;
+}
+
+.prep-time-title {
+    color: var(--rose-800);
+    padding: 0;
+    margin: 0;
+}
+
+.ingredients-title,
+.instructions-title,
+.nutrition-title {
+    font-family: 'Young serif', sans-serif;
+    color: var(--brown-800);
+}
+
+hr {
+   border: 1px solid var(--stone-150);
+   margin: 2rem 0;
+}
+
+.prep-time-list,
+.ingredients-list,
+.instructions-list {
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.prep-time-list li {
+    padding-left: 1rem;
+}
+
+.prep-time-list li::marker {
+    color: var(--rose-800);
+    font-size: 0.7rem;
+}
+
+.ingredients-list li {
+    padding-left: 1rem;
+}
+
+.ingredients-list li::marker {
+    color: var(--brown-800);
+    font-size: 0.7rem;
+}
+
+.instructions-list li {
+    padding-left: 1rem;
+}
+
+.instructions-list li::marker {
+    color: var(--brown-800);
+    font-weight: 600;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrition-table tr:not(:last-child) {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+.nutrition-table td {
+    padding: 0.75rem 0;
+}
+
+.nutrition-table td:nth-child(even) {
+    color: var(--brown-800);
+    font-weight: 700;
+    padding-right: 2rem;
+}
+
+.nutrition-table td:nth-child(odd) {
+    padding-left: 2rem;
+}
